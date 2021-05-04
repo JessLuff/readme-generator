@@ -2,7 +2,7 @@
 
 ## Badges
 
-![Github license](https://img.shields.io/badge/license-APACHE 2.0-blue.svg)
+![Github license](https://img.shields.io/badge/license-APACHE-2.0-blue.svg)
 
 ## Description
 
