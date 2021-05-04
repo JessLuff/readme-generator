@@ -1,6 +1,12 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === 'MIT'){
+    const badge = `![Github license]](https://img.shields.io/badge/license-${answers.license}-blue.svg)`;
+    console.log(badge);
+  }
+  return badge;
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -15,7 +21,8 @@ const generateMarkdown = (answers) =>
 `# ${answers.title}
 
 ## Badges
-Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+
+![Github license]](https://img.shields.io/badge/license-${answers.license}-blue.svg)
 
 ## Description
 

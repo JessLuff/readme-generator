@@ -72,6 +72,7 @@ const promptUser = () => {
 const init = () => {
     promptUser()
       //.then((answers) => writeFileAsync('projectREADME.md', writeToFile(answers)))
+      //.then(renderLicenseBadge(answer.license))
       .then((answers) => writeFileAsync('projectREADME.md', writeToFile(answers)))
       .then(() => console.log('Successfully wrote to projectREADME.md'))
       .catch((err) => console.error(err));
