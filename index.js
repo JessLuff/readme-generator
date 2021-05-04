@@ -1,17 +1,15 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
 
-// include generateMarkdown.js
+// Include generateMarkdown.js
 const writeToFile = require('./utils/generateMarkdown');
 
-// create writeFile function using promises instead of a callback function
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// TODO: Create an array of questions for user input
+// User input questions
 const promptUser = () => {
-//const questions = [
     return inquirer.prompt([
         {
             type: 'input',
@@ -64,15 +62,9 @@ const promptUser = () => {
     ]);
 };
 
-// TODO: Create a function to write README file
-//function writeToFile(/*fileName, */data) {}    //need to add license badge
-
-
-// TODO: Create a function to initialize app
+// Function to initializes prompt then file creations
 const init = () => {
     promptUser()
-      //.then((answers) => writeFileAsync('projectREADME.md', writeToFile(answers)))
-      //.then(renderLicenseBadge(answer.license))
       .then((answers) => writeFileAsync('projectREADME.md', writeToFile(answers)))
       .then(() => console.log('Successfully wrote to projectREADME.md'))
       .catch((err) => console.error(err));
